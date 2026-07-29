@@ -222,12 +222,12 @@ box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 </style>
 
-<div class="music-btn" onclick="toggleMusic()">
-🎵 Music
-</div>
+<button onclick="document.getElementById('bgmusic').play()">
+🎵 Play Music
+</button>
 
 <audio id="bgmusic" autoplay loop>
-<source src="music.mp3.mp3" type="audio/mpeg">
+    <source src="music.mp3.mp3" type="audio/mpeg">
 </audio>
 
 <section style="padding:80px;background:#fff0f6;text-align:center;">
