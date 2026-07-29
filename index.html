@@ -260,7 +260,7 @@ document.getElementById("loader").style.display="none";
 
 }
 
-const startDate=new Date("2026-05-03");
+const startDate=new Date("2026-04-19");
 
 function updateCounter(){
 
@@ -308,21 +308,17 @@ Every picture tells a story of us ❤️
 <div class="gallery">
 
 
-<section class="gallery">
-    <h2>📸 Our Beautiful Memories</h2>
+<div class="gallery">
 
-    <div class="photos">
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        <img src="photo3.jpg" alt="">
-        <img src="photo4.jpg" alt="">
-        <img src="photo5.jpg" alt="">
-        <img src="photo6.jpg" alt="">
-    </div>
-</section>
+<img src="photo1.jpg" onclick="openImage(this.src)">
+<img src="photo2.jpg" onclick="openImage(this.src)">
+<img src="photo3.jpg" onclick="openImage(this.src)">
+<img src="photo4.jpg" onclick="openImage(this.src)">
+<img src="photo5.jpg" onclick="openImage(this.src)">
+<img src="photo6.jpg" onclick="openImage(this.src)">
 
-</body>
-</html>
+</div>
+
 
 <div id="viewer" onclick="closeImage()">
 <img id="fullImage">
