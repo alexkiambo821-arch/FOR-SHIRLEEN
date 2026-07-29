@@ -517,6 +517,98 @@ document.getElementById("viewer").style.display="none";
 }
 
 </script>
+    <script>
+
+function showMessage(){
+
+document.getElementById("surprise").style.display="block";
+
+launchFireworks();
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+function launchFireworks(){
+
+canvas.style.display="block";
+
+for(let i=0;i<150;i++){
+
+particles.push({
+
+x:canvas.width/2,
+
+y:canvas.height/2,
+
+vx:(Math.random()-0.5)*10,
+
+vy:(Math.random()-0.5)*10,
+
+life:100,
+
+color:hsl(${Math.random()*360},100%,60%)
+
+});
+
+}
+
+animateFireworks();
+
+}
+
+function animateFireworks(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach((p,index)=>{
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,3,0,Math.PI*2);
+
+ctx.fillStyle=p.color;
+
+ctx.fill();
+
+p.x+=p.vx;
+
+p.y+=p.vy;
+
+p.life--;
+
+if(p.life<=0){
+
+particles.splice(index,1);
+
+}
+
+});
+
+if(particles.length>0){
+
+requestAnimationFrame(animateFireworks);
+
+}else{
+
+canvas.style.display="none";
+
+}
+
+}
+
+</script>
 
 <section style="padding:90px 20px;background:linear-gradient(135deg,#ff5fa2,#ff84b7);color:white;text-align:center;">
 
