@@ -1,37 +1,159 @@
-<h2>💌 A Letter To You</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shirleen Wangui ❤️</title>
 
-<p>Dear Shirleen Wangui,</p>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-<br>
+body{
+background:linear-gradient(135deg,#ff7eb3,#ffcad4);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+animation:fade 2s;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+animation:fade 3s;
+}
+
+button{
+margin-top:40px;
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4081;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.section{
+padding:70px 25px;
+}
+
+.card{
+background:white;
+color:#333;
+max-width:850px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.card h2{
+color:#ff4081;
+margin-bottom:20px;
+}
+
+.card p{
+font-size:18px;
+line-height:1.8;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>❤️ For Shirleen Wangui ❤️</h1>
 
 <p>
-Every day with you reminds me that true love exists. Your smile lights up my world, your kindness gives me strength, and your love fills my heart with happiness I never knew was possible.
+Every day with you is a blessing,
+and every memory we create
+becomes my favorite.
+</p>
+
+<button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+Open My Heart ❤️
+</button>
+
+</div>
+
+<div class="section" id="letter">
+
+<div class="card">
+
+<h2>💌 Dear Shirleen</h2>
+
+<p>
+
+Meeting you changed my life in ways I never imagined.
+
+Your smile brightens my darkest days.
+
+Your kindness gives me peace.
+
+Your love makes me a better man.
+
+Thank you for choosing me.
+
+No matter where life takes us,
+
+I promise to love you,
+
+respect you,
+
+and stand beside you.
+
+I choose you...
+
+Today.
+
+Tomorrow.
+
+Forever.
+
+❤️
+
 </p>
 
 <br>
 
-<p>
-Thank you for choosing me, believing in me, and standing by my side. I promise to cherish you, respect you, protect your heart, and keep choosing you every single day.
-</p>
+<h3>Forever Yours,</h3>
 
-<br>
+<h2>Ngugi ❤️</h2>
 
-<p>
-No matter where life takes us, I pray we continue growing together, laughing together, and creating beautiful memories that we'll treasure forever.
-</p>
+</div>
 
-<br>
+</div>
 
-<p>
-You are my peace, my best friend, and the greatest blessing in my life.
-</p>
-
-<br>
-
-<p><b>I love you today, tomorrow, and forever. ❤️</b></p>
-
-<br>
-
-<p>Forever Yours,</p>
-
-<p><b>Ngugi ❤️</b></p>
+</body>
+</html>
