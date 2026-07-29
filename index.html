@@ -54,3 +54,134 @@ Replace these placeholders with your favorite photos together.
 </p>
 
 </section>
+<!-- Floating Hearts -->
+<style>
+.heart{
+position:fixed;
+bottom:-40px;
+color:#ff4d88;
+font-size:20px;
+pointer-events:none;
+animation:floatUp linear infinite;
+opacity:.8;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0) scale(0.8);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.4);
+opacity:0;
+}
+}
+</style>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML=["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+heart.style.fontSize=(18+Math.random()*28)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+<section style="padding:90px 20px;background:linear-gradient(135deg,#ff7eb3,#ff4d88);color:white;text-align:center;">
+
+<h1 style="font-size:48px;">
+🌹 Forever & Always 🌹
+</h1>
+
+<p style="max-width:800px;margin:auto;font-size:22px;line-height:1.9;padding-top:25px;">
+
+If I could choose again...
+
+I'd still choose you.
+
+Every sunrise.
+
+Every sunset.
+
+Every lifetime.
+
+You are the most beautiful chapter of my story.
+
+Thank you for being my happiness.
+
+❤️
+
+</p>
+
+<br><br>
+
+<button
+onclick="showMessage()"
+style="
+background:white;
+color:#ff4d88;
+padding:18px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-weight:bold;">
+
+💌 Open My Final Surprise
+
+</button>
+
+<div id="surprise"
+style="
+display:none;
+margin-top:40px;
+font-size:28px;
+font-weight:bold;
+">
+
+✨ I LOVE YOU, SHIRLEEN WANGUI ✨
+
+<br><br>
+
+❤️ Forever Yours, Ngugi ❤️
+
+</div>
+
+</section>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("surprise").style.display="block";
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
